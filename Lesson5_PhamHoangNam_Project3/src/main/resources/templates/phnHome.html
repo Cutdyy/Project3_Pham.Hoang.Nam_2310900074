@@ -1,0 +1,15 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="vi">
+<head th:replace="fragments/_phnLayout::head(${title})"></head>
+<body>
+<header th:replace="fragments/_phnLayout::header"></header>
+<nav th:insert="fragments/_phnLayout::menu"></nav>
+
+<section class="container mt-5 text-center">
+    <h1>Chào mừng đến với Devmaster</h1>
+    <a th:href="@{/profile}" class="btn btn-success mt-3">Xem Profile</a>
+</section>
+
+<footer th:replace="fragments/_phnLayout::footer"></footer>
+</body>
+</html>

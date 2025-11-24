@@ -1,0 +1,20 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org" lang="vi">
+<head th:replace="fragments/_phnLayout::head(${title})"></head>
+<body>
+<header th:replace="fragments/_phnLayout::header"></header>
+<nav th:insert="fragments/_phnLayout::menu"></nav>
+
+<section class="container mt-5 d-flex justify-content-center">
+    <div class="card border-success p-4" style="width: 400px;" th:each="info : ${DevmasterProfile}">
+        <h2 th:text="${info.name}"></h2>
+        <p>NickName: <span th:text="${info.nickName}"></span></p>
+        <p>Email: <span th:text="${info.email}"></span></p>
+        <p>Website: <span th:text="${info.website}"></span></p>
+        <a th:href="@{/}" class="btn btn-success mt-3">Back</a>
+    </div>
+</section>
+
+<footer th:replace="fragments/_phnLayout::footer"></footer>
+</body>
+</html>
